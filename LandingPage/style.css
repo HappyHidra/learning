@@ -1,0 +1,156 @@
+html, body {
+	margin: 0px; /** отступы со всех сторон равны 0px **/
+	padding: 0px; /** отступы со всех сторон равны 0px **/
+	height: 100%;
+	min-width:300px;
+	font-family: Arial, Helvetica, 'sans-serif'; /** Шрифты по умолчанию **/
+}
+
+#toTop {
+	width:100px;
+	border:1px solid #ccc;
+	background:#f7f7f7;
+	text-align:center;
+	padding:5px;
+	position:fixed;
+	bottom:150px; /* отступ кнопки от нижнего края страницы*/
+	right:10px;
+	cursor:pointer;
+	display:none;
+	color:#333;
+	font-family:verdana;
+	font-size:11px;
+}
+
+.container {
+	width: 100%;
+	max-width: 1000px;
+	margin:0 auto;
+	text-align: center;
+	
+}
+
+.header-descript {
+	width: 100%;
+	background-color: rgb(0,51,102, 0.8);
+	color: white;
+}
+
+.header-descript .header-title {
+	margin-top: 10px;
+	font-size: 42px;
+	text-align: center;
+}
+
+.header-descript .header-description {
+	font-size: 20px;
+	text-align: center;
+	font-style: italic;
+}
+
+.image-form-container {
+    margin-top: 10px;
+    
+}
+.image-form-container .left-photo {
+	background: url('images/main.jpg');
+	background-size: cover; 
+	height: 300px;
+}
+
+.sale {
+	background-color: rgb(0,51,102, 0.8);
+	margin-top: 10px;
+	color: white;
+}
+
+.sale .title {
+	font-size: 28px;
+	text-align: center;
+}
+
+.triggers {
+	margin-top: 20px;
+}
+
+.triggers .triggers-title {
+	font-size: 22px;
+	text-align: center;
+}
+
+.trigger, .response {
+	font-size: 15px;
+	text-align: center;
+	border: 1px solid #eee;
+	height: 200px;
+}
+.h1{
+	font-size:25px;
+}
+.responses {
+	margin-top: 10px;
+}
+
+.responses .responses-title {
+	font-size: 25px;
+	color: rgba(255, 75, 4, 0.8);
+	text-align: center;
+	width: 100%;
+	height: 250px;
+	background-image: url('images/response.png');
+	background-position: cover;
+	background-position: top;
+}
+
+.contacts {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+}
+.adress{
+	color:rgb(0,51,102, 0.8);
+	font-size: 20px;
+	float:left;
+	text-align: center;
+}
+
+.contacts .contacts-title {
+	font-size: 25px;
+	color: rgba(255, 75, 4, 0.8);
+	text-align: center;
+	width: 100%;
+	height: 250px;
+}
+.contacts-title2{
+	background-image: url('images/response.png');
+	background-position: cover;
+	background-position: top;	
+}
+.contacts-title3{
+	background-image: url('images/response.png');
+	background-position: cover;
+	background-position: top;	
+}
+
+#rasporka {
+	height: 150px;
+}
+
+#map{
+	margin-left: auto;
+	margin-right: auto;
+}
+#gmap_canvas img{
+	max-width:none!important;
+	background:none!important
+}
+
+.footer {
+	width: 100%;
+	min-width: 410px;
+	color: white;
+	background-color: rgb(0,51,102, 0.8);
+	margin-top: -50px;
+	height: 100px;
+	line-height: 3.5em;
+}
