@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<head>
+    <title>Wedding Site</title>
+    <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap-theme.min.css">
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="ajax.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() != 0) {
+                    $('#toTop').fadeIn();
+                } else {
+                    $('#toTop').fadeOut();
+                }
+            });
+            $('#toTop').click(function() {
+                $('body,html').animate({
+                        scrollTop: 0
+                    }, 800);
+            });
+        });
+    </script>
+</head>
+<div class='buttons' id="toTop">Наверх</div>
+<body>
+    <div class='container'>
+
+        <!--Верхнее меню навигации-->
+        <ul class="nav nav-tabs nav-justified">
+            <li class='buttons'><a href="#invitationAnchor">Приглашение</a></li>
+            <li class='buttons'><a href="#responsesAnchor">Пожелания и приятные слова</a></li>
+            <li class='buttons'><a href="#contactsAnchor">Контакты</a></li>
+        </ul>
+
+        <!--Приветствие-->
+        <div class='hello row'>
+            <div class='col-xs-12'>
+                <div class='row '>
+                    <div class='col-xs-6 hello-left'>Добро пожаловать <br>в наш особенный день!</div>
+                    <div class='col-xs-6 hello-right'></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Приглашение-->
+        <div id="invitationAnchor"></div>
+        <div class="invitation row">
+            <div class='invitationHeader col-xs-12'>
+                <span> Приглашение!</span>
+            </div>
+            <div class="col-xs-12">
+                <div class='row'>
+                    <div class='col-xs-4 invitation1'></br></br></br>Кирилл & Юлия </br> 8 июня 2019 года</div>
+                    <div class='col-xs-4 invitation2'></br>Дорогие Друзья! С огромной радостью приглашаем вас на нашу
+                        свадьбу!
+                        Встречаемся 8 июня 2019 года в загородном клубе "Медвежьи озера" по адресу: Московская обл.,
+                        Щелковский р-н, д. Медвежьи озёра, ул. Берег озера, дом 1. Сбор гостей в 15:00 Просим вас
+                        подтвердить свое присутствие на торжестве телефонным звонком до 1 февраля 2019 года:
+                        8-916-481-43-17 Кирилл, 8-967-074-47-43 Юлия. Ждём вас!</div>
+                    <div class='col-xs-4 invitation3'>Подсказки и пожелания * Не ломайте голову над подарками. Ваши
+                        пожелания в конвертах помогут нам осуществить мечту о свадебном путешествии. * И, пожалуйста,
+                        не
+                        дарите живые цветы! Мы не успеем насладиться их красотой до отъезда. * Мы старались сделать
+                        праздник красивым и будем рады, если в своих нарядах вы поддержите цветовую гамму нашей свадьбы
+                        (палитра с оттенками) Расписание: (график с значками и временем) По всем вопросам в день
+                        свадьбы
+                        обращайтесь к нашему координатору Екатерине: 8-916-378-83-80</div>
+                </div>
+            </div>
+        </div>
+        <!--Пожелания-->
+        <div id="responsesAnchor"></div>
+        <div class='responses row'>
+            <div class='responsesHeader col-xs-12'>
+                <span>Место для пожеланий!</span>
+            </div>
+            <div class='col-xs-12'>
+                <div class='row'>
+                    <div class='col-xs-6 responsesText'>Дорогие гости! Здесь вы можете пожелать нам что-то! Будет очень
+                        приятно!</div>
+                    <div class='col-xs-6 responsesInput'>
+                        <form id="ajax_form" action=" " method="post">
+                            <form class="form-horizontal">
+
+                                <!-- <input type="text" name="name" placeholder="NAME" /><br>
+                                            <input type="text" name="phonenumber" placeholder="YOUR PHONE" /><br>
+                                            <input type="button" id="btn" value="Отправить" />
+
+                                            <div id="result_form"></div>  -->
+                                <div class="form-group">
+                                    <label for="inputName" class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="name" class="form-control" id="inputName" placeholder="Введите ваше имя">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPhone" class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="phonenumber" class="form-control" id="inputPhone"
+                                            placeholder="Введите пожелание!">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="button" id="btn" class="btn btn-default buttons">Пожелать</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Контакты-->
+        <div id="contactsAnchor"></div>
+        <div class='contacts row'>
+            <div class='contactsHeader col-xs-12'>
+                <span>Контакты!</span>
+            </div>
+            <div class='col-xs-12'>
+                <div class='row'>
+                    <div class='col-xs-6 contactsText'>Дорогие гости! Справа вы можете посмотреть расположение будущего
+                        торжества на карте!</div>
+                    <div class='col-xs-6 contactsMap'>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405152.54175735853!2d37.521952733449154!3d55.87675039899489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414acce701bf8f3f%3A0x101f1d79ac103769!2z0JfQsNCz0L7RgNC-0LTQvdGL0Lkg0LrQu9GD0LEgItCc0LXQtNCy0LXQttGM0Lgg0L7Qt9C10YDQsCI!5e0!3m2!1sru!2sru!4v1549803442565"
+                            width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='rasporka'></div>
+        <!-- Конец контейнера -->
+</div>
+        <!-- Футер -->
+        <div class="footer row">
+            <div class="col-xs-4 text-center">Наш телефон: 8-985-905-13-17</div>
+            <div class="col-xs-4 text-center">Наша группа "ВКонтакте</div>
+            <div class="col-xs-4 text-center">2018.</div>
+        </div>
+
+        <!-- Плавная прокруточка к якорям -->
+        <script>
+            $(document).ready(function () {
+                $("a[href*=#]").on("click", function (e) {
+                    var anchor = $(this);
+                    $('html, body').stop().animate({
+                        scrollTop: $(anchor.attr('href')).offset().top
+                    }, 777);
+                    e.preventDefault();
+                    return false;
+                });
+            });
+        </script>
+
+</body>
+
+</HTML>
