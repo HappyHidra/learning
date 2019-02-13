@@ -1,0 +1,60 @@
+body, html { /*сбросить отступы макета сайта от внутренних и внешних границ экрана (для соблюдения кроссбраузерности) */
+    margin:0px;
+	padding:0px;
+	height: 100%;
+}
+
+#container{
+	width: 100%;
+    min-width: 800px;
+    min-height: 100%;
+	margin:0 auto;
+    text-align: center;
+}
+.header {
+    margin: auto auto;
+    width:100%;
+    height: 50px;
+    background-color: rgb(253, 72, 0);
+}
+.leftBlock {
+    float: left; /*Автоматически установится свойство display:block; */
+    width: 25%;
+    height: 600px;
+    background-color: blue;
+    border: solid 4px black;
+}
+.centerTop {
+    float: left;
+    width: 45%;
+    height: 300px;
+    background-color: red;
+    border: solid 4px black;
+    margin: 1px 1% 1px 1%;  /*верх лево низ право */
+    /* clear:left; заставили контейнер Div увидеть и учесть в коде перед этим тэгом плавающий слева от него элемент/ Заставляем блок заметить стоящие с ним слева блоки */
+}
+.centerBot {
+    float: left;
+    width: 45%;
+    height: 300px;
+    background-color: wheat;
+    border: solid 4px black;
+    margin: 1px 1% 1px 1%; 
+}
+.rightBlock {
+    float: right;
+    width: 25%;
+    height: 600px;
+    background-color: olive;
+    border: solid 4px black;
+}
+#clear {
+    clear: both;
+}
+
+.footer{
+    background-color:#FFC0FF;
+    clear:both;
+    height: 50px;
+    margin-top:-50px;
+}
