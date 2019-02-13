@@ -1,0 +1,125 @@
+body, html { /*сбросить отступы макета сайта от внутренних и внешних границ экрана (для соблюдения кроссбраузерности) */
+    margin:0px;
+	padding:0px;
+	height: 100%;
+}
+
+.main-page__container{
+	width: 100%;
+	max-width: 1600px;
+	min-width: 1400px;
+	min-height: 100%;
+	margin:0 auto;
+    text-align: center;
+}
+
+.main-page__header{	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main-page__menu{
+	float: left;
+	background-image: url("images/leftlomon.jpg");
+	background-position: top;
+	background-size: cover; 
+	max-width: 412px;
+	min-width: 180px;
+	max-height: 700px;
+}
+
+.main-page__menu li{ 
+	position: relative; 
+	left: 10px;
+	top: -15px; 
+	list-style-type: none;
+	margin: 0px 160px;
+	padding: 24px 10px; 
+	border: 2px solid rgb(21, 39, 65);
+	width:100%;
+	max-width: 180px;
+	min-width: 180px;
+	background-color: rgb(0,51,102,0.8);
+}
+
+.main-page__menu li:hover{ /* При наведении курсора на элемент меняется ячейка текста */
+	background-color: rgb(0,90,142, 0.7);
+}
+
+.main-page__menu a{ /* Сам текст в навигационном меню */
+	color: white;
+  	text-decoration: none;
+}
+
+.main-page__menu a:hover{  /* При наведении курсора на элемент меняется цвет текста */
+	color: rgba(214, 206, 206, 0.699);
+}
+
+.main-page__slider{
+	float: left;
+	max-height: 400px;
+	min-width: 680px;
+	min-height: 400px;
+	border: solid 2px blue;
+}
+
+#slider{
+	float: left;
+	max-height: 400px;
+	min-width: 600px;
+	min-height: 400px;
+	border: solid 2px blACK;
+}
+.main-page__sliderButtons {
+	position: relative;
+	width: 10px;
+	height: 10px;
+	margin: 0;
+	padding: 0;
+	border: 13px solid transparent;
+}
+.main-page__buttonPrev{
+	border-right-color: rgb(0,51,102, 0.8);
+	top:150px;
+	right:650px;
+}
+.main-page__buttonNext{
+	border-left-color: rgb(0,51,102, 0.8);
+	top:150px;
+	right:150px;
+}
+.main-page__sliderButtons:hover{
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.301), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.main-page__blogCenter{
+	float: left;
+	background-color: aquamarine;
+	width:684px;
+	height: 300px;
+}
+
+.main-page__newsRight{
+	float: right;
+	width:300px;
+	height:700px;
+	background-color: rgba(11, 72, 241, 0.637);
+	border: solid 2px black;
+}
+
+#rasporka {
+	height: 50px;
+}
+
+.main-page__footer{
+	clear: both;
+	color: white;
+	background-color: rgb(0,51,102, 0.8);
+	margin-top: -50px;
+	height: 50px;
+	line-height: 3.5em;
+	text-align: center;
+	font-family: Arial,Helvetica,sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+}
